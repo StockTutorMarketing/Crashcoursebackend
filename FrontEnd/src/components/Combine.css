@@ -1,0 +1,37 @@
+/* .mobile{
+    color: red;
+} */
+
+.gradient_anim_btn_combine {
+  width: 100%;
+    background: -webkit-linear-gradient(225deg, #EBB913, #FFEAA3,             
+    #EBB913) 5% 5% / 5% 5%;
+    background-size: 200% auto;
+    -webkit-animation: gradient_move 5s ease infinite;
+    animation: gradient_move 5s ease infinite;
+  }
+
+
+
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
+    /* Add your mobile-specific styles here */
+    /* .mobile{
+        color: yellow;
+    } */
+}
+
+/* For tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Add your tablet-specific styles here */
+}
+
+/* For laptop devices */
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Add your laptop-specific styles here */
+}
+
+/* For desktop devices */
+@media only screen and (min-width: 1441px) {
+    /* Add your desktop-specific styles here */
+}
