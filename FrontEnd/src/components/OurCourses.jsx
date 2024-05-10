@@ -2,7 +2,6 @@ import {
   Box,
   Flex,
   Heading,
-  Image,
   SimpleGrid,
   Stack,
   Text,
@@ -10,10 +9,6 @@ import {
 import React from "react";
 import { FaBookOpen } from "react-icons/fa";
 import bgimg from "../Data/bgimg.jpg";
-import basics from "../Data/Basics.png";
-import fundamenta from "../Data/funda.png";
-import technical from "../Data/technical.png";
-import derivative from "../Data/derivative.png";
 import { Carousel } from "antd";
 import Lottie from "lottie-react";
 import Reading from '../Data/Reading.json'
@@ -56,7 +51,6 @@ const OurCourses = () => {
         >
           <SimpleGrid gap={8} columns={{base:1, sm:1, md:1, lg:1}} justifyItems={"center"} alignItems={"center"} padding={'2%'} justifyContent={'space-around'} margin={'auto'}>
             <Box margin={'auto'} width={'70%'} >
-              {/* <Image margin={'auto'} src={basics} /> */}
               <Lottie animationData={Reading}/>
             </Box>
 
@@ -99,7 +93,6 @@ const OurCourses = () => {
 
           <SimpleGrid gap={8} columns={{base:1, sm:1, md:1, lg:1}} justifyItems={"center"} alignItems={"center"} padding={'2%'} justifyContent={'space-around'} margin={'auto'}>
             <Box margin={'auto'} width={'68%'} >
-              {/* <Image margin={'auto'} src={fundamenta} /> */}
               <Lottie animationData={ManMoving}/>
             </Box>
 
@@ -134,7 +127,6 @@ const OurCourses = () => {
 
           <SimpleGrid gap={8} columns={{base:1, sm:1, md:1, lg:1}} justifyItems={"center"} alignItems={"center"} padding={'2%'} justifyContent={'space-around'} margin={'auto'}>
             <Box margin={'auto'} width={'75%'} >
-              {/* <Image margin={'auto'} src={technical} /> */}
               <Lottie animationData={Girl}/>
             </Box>
 
@@ -169,7 +161,6 @@ const OurCourses = () => {
 
           <SimpleGrid gap={8} columns={{base:1, sm:1, md:1, lg:1}} justifyItems={"center"} alignItems={"center"} padding={'2%'} justifyContent={'space-around'} margin={'auto'}>
             <Box margin={'auto'} width={'80%'} >
-              {/* <Image margin={'auto'} src={derivative} /> */}
               <Lottie animationData={Derivative}/>
             </Box>
 
@@ -218,7 +209,6 @@ const OurCourses = () => {
         
           <SimpleGrid  gap={16} columns={{base:1, sm:1, md:1, lg:2}} justifyItems={"center"} alignItems={"center"}  padding={'2%'} justifyContent={'space-around'} margin={'auto'}>
             <Box width={'64%'} >
-              {/* <Image src={basics} /> */}
               <Lottie animationData={Reading}/>
             </Box>
 
@@ -244,11 +234,6 @@ const OurCourses = () => {
                   <FaBookOpen />
                   <Text>Dividend, Split and bonus</Text>
                 </Flex>
-
-                {/* <Flex gap={3} alignItems={"center"}>
-                  <FaBookOpen />
-                  <Text>Investment Strategies</Text>
-                </Flex> */}
               </SimpleGrid>
             </Stack>
           </SimpleGrid>
@@ -276,23 +261,16 @@ const OurCourses = () => {
                   <FaBookOpen />
                   <Text>Micro Factors</Text>
                 </Flex>
-
-                {/* <Flex gap={3} alignItems={"center"}>
-                  <FaBookOpen />
-                  <Text>Market Research</Text>
-                </Flex> */}
               </SimpleGrid>
             </Stack>
 
             <Box width={'90%'} >
-              {/* <Image width={'90%'} src={fundamenta} /> */}
               <Lottie animationData={ManMoving}/>
             </Box>
           </SimpleGrid>
 
           <SimpleGrid gap={16} columns={{base:1, sm:1, md:1, lg:2}} justifyItems={"center"} alignItems={"center"}  padding={'2%'} justifyContent={'space-around'} margin={'auto'}>
             <Box width={'90%'} >
-              {/* <Image src={technical} /> */}
               <Lottie animationData={Girl}/>
             </Box>
 
@@ -357,7 +335,6 @@ const OurCourses = () => {
             </Stack>
 
             <Box width={'90%'} >
-              {/* <Image src={derivative} /> */}
               <Lottie animationData={Derivative}/>
             </Box>
           </SimpleGrid>

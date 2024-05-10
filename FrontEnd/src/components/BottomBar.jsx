@@ -188,7 +188,7 @@ const BottomBar = () => {
                               fontWeight: 400,
                             }}
                           >
-                            5999
+                            2999
                           </s>
                         </Text>
                       </Flex>
@@ -198,7 +198,7 @@ const BottomBar = () => {
                       fontWeight={400}
                       color={"whitesmoke"}
                     >
-                      26th May, 4:00 PM - 8:00 PM
+                      26th May, 4:00 PM - 7:00 PM
                     </Text>
                   </Stack>
                 </Stack>
