@@ -24,9 +24,11 @@ import { PhoneIcon } from "@chakra-ui/icons";
 import "./BottomBar.css";
 import { FaIndianRupeeSign } from "react-icons/fa6";
 import { cashfree } from "../cashfree/utils";
+import { useNavigate } from "react-router-dom";
 
 const BottomBar = () => {
   const toast = useToast();
+  const navigate = useNavigate();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [fname, setFname] = useState("");
   const [email, setEmail] = useState("");
@@ -66,6 +68,7 @@ const BottomBar = () => {
         name,
         email,
         phone,
+        price:399
       };
 
       axios
@@ -269,7 +272,7 @@ const BottomBar = () => {
                             <Button
                               //   width={"100%"}
                               bgColor={"#EBB913"}
-                              onClick={handleClick}
+                              onClick={navigate("/payment")}
                               color={"rgb(5,8,69)"}
                               _hover={{
                                 color: "#EBB913",

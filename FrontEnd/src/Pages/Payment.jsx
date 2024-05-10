@@ -61,7 +61,7 @@ const Payment = () => {
         name,
         email,
         phone,
-        price: 399,
+        price: 1,
       };
 
       axios
