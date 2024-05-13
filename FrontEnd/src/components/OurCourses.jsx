@@ -36,7 +36,7 @@ const OurCourses = () => {
         {/******************************* Heading *************************************/}
 
         <Box width={"50%"} margin={"auto"} textAlign={'center'} pb={2} color={'#171945'}>
-          <Heading fontFamily={'roboto'} fontWeight={500} fontSize={{base:24, sm:28, md:32, lg:32}}>Our Courses</Heading>
+          <Heading fontFamily={'roboto'} fontWeight={500} fontSize={{base:24, sm:28, md:32, lg:32}}>Crash Course Curriculum</Heading>
         </Box>
 
 

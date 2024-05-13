@@ -142,11 +142,13 @@ const BottomBar = () => {
         bottom={0}
         height={{ base: 70, sm: 110, md: "120", lg: "130" }}
         padding={{ base: 2, sm: 5, md: 5, lg: 5 }}
+        // border={'2px solid red'}
+        // width={'100%'}
       >
         <Box
           width={{ base: "100%", sm: "100%", md: "90%", lg: "84%" }}
           margin={"auto"}
-          mt={{ sm: 0, md: 0, lg: 0 }}
+          // mt={{ sm: 0, md: 0, lg: 0 }}
         >
           <Flex>
             <Box
@@ -182,7 +184,7 @@ const BottomBar = () => {
                       fontWeight={640}
                     >
                       <Flex align={"center"} gap={{base:1, sm:2, md:3, lg:3}}>
-                      <Flex alignItems={'center'} fontSize={{ base: 16, sm: 18, md: 20, lg: 26 }}><FaIndianRupeeSign /> 399{" "}</Flex>
+                      <Flex justifyContent={'center'} alignItems={'center'} fontSize={{ base: 16, sm: 18, md: 20, lg: 26 }}><FaIndianRupeeSign /> 399{" "}</Flex>
                         
                         <Text fontSize={{ base: 12, sm: 14, md: 16, lg: 20 }}>
                           <s
@@ -201,7 +203,7 @@ const BottomBar = () => {
                       fontWeight={400}
                       color={"whitesmoke"}
                     >
-                      26th May, 4:00 PM - 7:00 PM
+                      2nd June, 4:00 PM - 7:00 PM
                     </Text>
                   </Stack>
                 </Stack>

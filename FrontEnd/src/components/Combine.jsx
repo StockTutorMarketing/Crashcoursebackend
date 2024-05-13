@@ -3,7 +3,9 @@ import {
   Button,
   Flex,
   Grid,
+  HStack,
   Heading,
+  Image,
   SimpleGrid,
   Stack,
   Text,
@@ -16,13 +18,11 @@ import textbg from "../Data/textbg.webp";
 import { useNavigate } from "react-router-dom";
 import promo from "../Data/promo.mp4";
 import { useState } from "react";
+import crashtext from '../Data/animatedtext.gif';
+import Lottie from "lottie-react";
+import alert from '../Data/alert.json';
 
 const Combine = () => {
-  // const navigate = useNavigate();
-
-  // const handleMain=()=>{
-  //   <navigate to="/dashboard"/>
-  // }
 
   const navigate = useNavigate();
   const [muted, setMuted] = useState(true);
@@ -42,18 +42,18 @@ const Combine = () => {
           <SimpleGrid
             columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
             justifyContent={"space-around"}
-            gap={8}
+            gap={0}
           >
             {/* *************************************Left Portion************************************************* */}
-            {/* ************************************************************************************** */}
+            {/* ************************************************************************************************** */}
 
             <Stack
               width={{ base: "100%", sm: "80%", md: "80%", lg: "70%" }}
-              gap={{ base: 4, sm: 8, md: 8, lg: 8 }}
+              gap={{ base: 4, sm: 8, md: 8, lg: 10 }}
               margin={"auto"}
             >
-              <Box>
-                <Text
+              <Box width={'160%'}>
+                {/* <Text
                   textAlign={{
                     base: "ceter",
                     sm: "center",
@@ -68,18 +68,19 @@ const Combine = () => {
                   <span style={{ color: "#F5C114", fontWeight: 600 }}>
                     Stocktutor’s 3 Hours
                   </span>{" "}
-                  {/* <br /> */}
                   Crash Course
-                </Text>
+                </Text> */}
+                <Image margin={'auto'} src={crashtext} alt="crashcoursetext"/>
+
               </Box>
 
               <Box>
                 <Text
                   textAlign={{
-                    base: "ceter",
+                    base: "center",
                     sm: "center",
                     md: "center",
-                    lg: "left",
+                    lg: "justify",
                   }}
                   color={"whitesmoke"}
                   fontSize={{ base: 16, sm: 16, md: 16, lg: 20 }}
@@ -95,9 +96,13 @@ const Combine = () => {
                 columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
                 gap={{ base: 4, sm: 8, md: 8, lg: 12 }}
                 margin={"auto"}
+                justifyContent={'space-between'}
+                // border={'2px solid red'}
+                // width={'100%'}
               >
                 <Flex
                   // border={"2px solid red"}
+                  // textAlign={'center'}
                   className="gradient_anim_btn_combine"
                   borderRadius={10}
                   padding={"8px 12px"}
@@ -105,7 +110,7 @@ const Combine = () => {
                   gap={2}
                   justifyItems={"center"}
                   alignItems={"center"}
-                  width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
+                  // width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
                 >
                   <FaCalendar />
                   <Box>2nd June, 2024</Box>
@@ -125,7 +130,8 @@ const Combine = () => {
                 </Flex>
               </SimpleGrid>
 
-              <Button
+             
+                <Button
                 onClick={handleBook}
                 className="button-50"
                 role="button"
@@ -134,6 +140,7 @@ const Combine = () => {
                 bg={"#F5C114"}
                 fontWeight={800}
                 fontSize={{ base: 12, sm: 12, md: 16, lg: 20 }}
+                // rightIcon={<Lottie style={{fontsize:'4px'}} animationData={alert}/>}
               >
                 Book your seat now at ₹399 only
               </Button>
@@ -164,7 +171,7 @@ const Combine = () => {
                 // bg={"#f5c114"}
                 // height={"100%"}
                 bgImage={textbg}
-                bgBlendMode={20}
+                // bgBlendMode={20}
               >
                 <Grid
                   padding={{ base: 4, sm: 4, md: 8, lg: 12 }}

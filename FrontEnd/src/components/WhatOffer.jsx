@@ -12,6 +12,15 @@ import SchoolIcon from "@mui/icons-material/School";
 import VideocamIcon from '@mui/icons-material/Videocam';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import LiveTvIcon from '@mui/icons-material/LiveTv';
+import { IoBarChartSharp } from "react-icons/io5";
+import { LuBrainCircuit } from "react-icons/lu";
+import { HiOutlineAcademicCap } from "react-icons/hi2";
+import { BsCameraReels } from "react-icons/bs";
+
+
+
+
+
 // import styled from "styled-components";
 // import { keyframes } from "styled-components";
 
@@ -86,7 +95,7 @@ const WhatOffer = () => {
               boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px'
             }}
           >
-            <SchoolIcon style={{ fontSize: 50, alignItems: "center" }} />
+            <IoBarChartSharp style={{ fontSize: 42, alignItems: "center" }} />
             <Heading fontFamily={"roboto"} fontSize={28} fontWeight={500}>
               Virtual Trading
             </Heading>
@@ -116,7 +125,7 @@ const WhatOffer = () => {
               boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px'
             }}
           >
-            <VideocamIcon style={{ fontSize: 50, alignItems: "center" }} />
+            <BsCameraReels style={{ fontSize: 42, alignItems: "center" }} />
             <Heading fontFamily={"roboto"} fontSize={28} fontWeight={500}>
               Recorded Course
             </Heading>
@@ -175,7 +184,7 @@ const WhatOffer = () => {
               boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px'
             }}
           >
-            <SchoolIcon style={{ fontSize: 50, alignItems: "center" }} />
+            <LuBrainCircuit style={{ fontSize: 50, alignItems: "center" }} />
             <Heading fontFamily={"roboto"} fontSize={28} fontWeight={500}>
             Trading Strategies
             </Heading>
@@ -204,7 +213,7 @@ const WhatOffer = () => {
               boxShadow: 'rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px'
             }}
           >
-            <SchoolIcon style={{ fontSize: 50, alignItems: "center" }} />
+            <HiOutlineAcademicCap style={{ fontSize: 50, alignItems: "center" }} />
             <Heading fontFamily={"roboto"} fontSize={28} fontWeight={500}>
               Career Support
             </Heading>
