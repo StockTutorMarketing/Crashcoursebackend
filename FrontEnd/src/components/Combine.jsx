@@ -18,11 +18,11 @@ import textbg from "../Data/textbg.webp";
 import { useNavigate } from "react-router-dom";
 import promo from "../Data/promo.mp4";
 import { useState } from "react";
-import crashtext from '../Data/animatedtext.gif';
-import Lottie from "lottie-react";
-import alert from '../Data/alert.json';
+import crashtext from "../Data/animatedtext.gif";
+import { motion } from "framer-motion";
 
 const Combine = () => {
+  const text = "Take Charge of Your Future with StockTutor's 3 Hours Crash Course".split(" ");
 
   const navigate = useNavigate();
   const [muted, setMuted] = useState(true);
@@ -42,36 +42,35 @@ const Combine = () => {
           <SimpleGrid
             columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
             justifyContent={"space-around"}
-            gap={0}
+            gap={{ base: 5, sm: 5, md: 0, lg: 0 }}
           >
             {/* *************************************Left Portion************************************************* */}
             {/* ************************************************************************************************** */}
 
             <Stack
-              width={{ base: "100%", sm: "80%", md: "80%", lg: "70%" }}
+            // border={'2px solid red'}
+              width={{ base: "100%", sm: "100%", md: "80%", lg: "70%" }}
               gap={{ base: 4, sm: 8, md: 8, lg: 10 }}
               margin={"auto"}
             >
-              <Box width={'160%'}>
-                {/* <Text
-                  textAlign={{
-                    base: "ceter",
-                    sm: "center",
-                    md: "center",
-                    lg: "left",
-                  }}
-                  color={"whitesmoke"}
-                  fontSize={32}
-                  fontWeight={600}
-                >
-                  Take charge of your future with{" "}
-                  <span style={{ color: "#F5C114", fontWeight: 600 }}>
-                    Stocktutor’s 3 Hours
-                  </span>{" "}
-                  Crash Course
-                </Text> */}
-                <Image margin={'auto'} src={crashtext} alt="crashcoursetext"/>
-
+              <Box display={{base:'block', sm:'block', md:'none', lg:'none'}} className="topText" width={{ base: "100%", sm: "100%", md: "100%", lg: "160%" }}>
+                {/* <Image src={crashtext} alt="crashcoursetext"/> */}
+                {text.map((el, i) => (
+                  <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{
+                      duration: 0.50,
+                      delay: i / 10,
+                    }}
+                    key={i}
+                  >
+                    {el}{" "}
+                  </motion.span>
+                ))}
+              </Box>
+              <Box display={{base:'none', sm:'none', md:'block', lg:'block'}} width={{ base: "100%", sm: "100%", md: "100%", lg: "160%" }}>
+                <Image src={crashtext} alt="crashcoursetext"/>
               </Box>
 
               <Box>
@@ -93,19 +92,24 @@ const Combine = () => {
 
               <SimpleGrid
                 fontSize={{ base: 12, sm: 12, md: 16, lg: 16 }}
-                columns={{ base: 1, sm: 2, md: 2, lg: 2 }}
+                columns={{ base: 2, sm: 2, md: 2, lg: 2 }}
                 gap={{ base: 4, sm: 8, md: 8, lg: 12 }}
                 margin={"auto"}
-                justifyContent={'space-between'}
+                justifyContent={"space-between"}
                 // border={'2px solid red'}
-                // width={'100%'}
+                width="100%"
               >
                 <Flex
                   // border={"2px solid red"}
                   // textAlign={'center'}
                   className="gradient_anim_btn_combine"
                   borderRadius={10}
-                  padding={"8px 12px"}
+                  padding={{
+                    base: "4px 8px",
+                    sm: "4px 8px",
+                    md: "8px 12px",
+                    lg: "8px 12px",
+                  }}
                   variant="outline"
                   gap={2}
                   justifyItems={"center"}
@@ -130,8 +134,7 @@ const Combine = () => {
                 </Flex>
               </SimpleGrid>
 
-             
-                <Button
+              <Button
                 onClick={handleBook}
                 className="button-50"
                 role="button"
@@ -148,17 +151,19 @@ const Combine = () => {
 
             {/* ************************************* IFrame ************************************************* */}
             {/* ************************************************************************************** */}
-            <Box width={"70%"} margin={"auto"}>
+            <Box
+              width={{ base: "100%", sm: "100%", md: "70%", lg: "70%" }}
+              margin={"auto"}
+            >
               <Box>
-                {/* <iframe style={{borderRadius:'20px 20px 0px 0px'}} src="https://drive.google.com/file/d/1LGVvrpBsb_jGWpA010mOXQmDmyEnABms/preview" width="100%" height="260" allow="autoplay"></iframe> */}
                 <video
                   autoPlay
                   loop
                   muted={muted}
                   onClick={toggleMute}
                   style={{
-                    width: "100%",
-                    height: "100%",
+                    // width: "100%",
+                    // height: "100%",
                     objectFit: "cover",
                     borderRadius: "20px 20px 0px 0px",
                   }}
@@ -176,7 +181,7 @@ const Combine = () => {
                 <Grid
                   padding={{ base: 4, sm: 4, md: 8, lg: 12 }}
                   fontWeight={600}
-                  fontSize={{ base: 16, sm: 16, md: 20, lg: 20 }}
+                  fontSize={{ base: 14, sm: 16, md: 20, lg: 20 }}
                   gap={2}
                 >
                   <Flex alignItems={"center"} gap={4}>
@@ -217,16 +222,16 @@ const Combine = () => {
           {/* ************************************************* Bottom Section ************************************************ */}
 
           <SimpleGrid
-            columns={{ base: 1, sm: 2, md: 2, lg: 4 }}
+            columns={{ base: 2, sm: 2, md: 2, lg: 4 }}
             className="bottomtab"
             margin={"auto"}
             border={"1px solid black"}
-            width={"70%"}
+            width={{ base: "100%", sm: "100%", md: "70%", lg: "70%" }}
             justifyContent={"space-between"}
             padding={4}
             borderRadius={20}
             bgColor={"#D7AA3B"}
-            gap={{ base: 4, sm: 2, md: 2, lg: 4 }}
+            gap={{ base: 2, sm: 2, md: 2, lg: 4 }}
           >
             <Box alignContent={"center"}>
               <Heading
@@ -234,7 +239,11 @@ const Combine = () => {
               >
                 12k+
               </Heading>
-              <Text>Students Enrolled</Text>
+              <Text
+                fontSize={{ base: "12px", sm: "14px", md: "16px", lg: "20px" }}
+              >
+                Students Enrolled
+              </Text>
             </Box>
 
             <Box alignContent={"center"}>
@@ -243,7 +252,11 @@ const Combine = () => {
               >
                 25k+
               </Heading>
-              <Text>Trading Community</Text>
+              <Text
+                fontSize={{ base: "12px", sm: "14px", md: "16px", lg: "20px" }}
+              >
+                Trading Community
+              </Text>
             </Box>
 
             <Box alignContent={"center"}>
@@ -252,7 +265,11 @@ const Combine = () => {
               >
                 5
               </Heading>
-              <Text>NISM Certified Tutors</Text>
+              <Text
+                fontSize={{ base: "12px", sm: "14px", md: "16px", lg: "20px" }}
+              >
+                NISM Certified Tutors
+              </Text>
             </Box>
 
             <Box alignContent={"center"}>
@@ -261,7 +278,11 @@ const Combine = () => {
               >
                 10+
               </Heading>
-              <Text>Certified Courses</Text>
+              <Text
+                fontSize={{ base: "12px", sm: "14px", md: "16px", lg: "20px" }}
+              >
+                Certified Courses
+              </Text>
             </Box>
           </SimpleGrid>
         </Stack>

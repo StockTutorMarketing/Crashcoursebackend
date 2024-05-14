@@ -28,7 +28,7 @@ import { BsCameraReels } from "react-icons/bs";
 const WhatOffer = () => {
   return (
     <>
-      <Box bgImage={ImgSource} maxH={"100%"} paddingY={2}>
+      <Box bgImage={ImgSource} maxH={"100%"} paddingY={8}>
         <Center>
           <Heading fontSize={{base:24, sm:28, md:32, lg:32}} style={{ fontFamily: "roboto", color:'#171945' }} fontWeight={500}>What we offer</Heading>
         </Center>

@@ -142,13 +142,14 @@ const BottomBar = () => {
         bottom={0}
         height={{ base: 70, sm: 110, md: "120", lg: "130" }}
         padding={{ base: 2, sm: 5, md: 5, lg: 5 }}
-        // border={'2px solid red'}
-        // width={'100%'}
       >
         <Box
           width={{ base: "100%", sm: "100%", md: "90%", lg: "84%" }}
           margin={"auto"}
-          // mt={{ sm: 0, md: 0, lg: 0 }}
+          mt={{ sm: 0, md: 0, lg: 0 }}
+          // border={'2px solid red'}
+           alignItems={"center"}
+              justifyContent={"center"}
         >
           <Flex>
             <Box
@@ -184,7 +185,7 @@ const BottomBar = () => {
                       fontWeight={640}
                     >
                       <Flex align={"center"} gap={{base:1, sm:2, md:3, lg:3}}>
-                      <Flex justifyContent={'center'} alignItems={'center'} fontSize={{ base: 16, sm: 18, md: 20, lg: 26 }}><FaIndianRupeeSign /> 399{" "}</Flex>
+                      <Flex alignItems={'center'} fontSize={{ base: 16, sm: 18, md: 20, lg: 26 }}><FaIndianRupeeSign /> 399{" "}</Flex>
                         
                         <Text fontSize={{ base: 12, sm: 14, md: 16, lg: 20 }}>
                           <s
@@ -213,13 +214,13 @@ const BottomBar = () => {
                 >
                   <Button
                     width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-                    size={{ base: "xs", sm: "sm", md: "md", lg: "lg" }}
+                    size={{ base: "md", sm: "md", md: "md", lg: "lg" }}
                     borderRadius={20}
                     bg={"rgb(255,200,69)"}
                     color={"black"}
                     fontSize={{ base: 8, sm: 12, md: 16, lg: 24 }}
                     fontWeight={640}
-                    mt={"15%"}
+                    mt={{base:"4%", sm:"15%", md:"15%", lg:"15%"}}
                     onClick={onOpen}
                   >
                     Book Your Seat Now

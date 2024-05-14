@@ -128,10 +128,10 @@ const Payment = () => {
       boxShadow={"rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px"}
         // border={"2px solid silver"}
         borderRadius={20}
-        width={"60%"}
+        width={{base:'90%', sm:'80%', md:'60%', lg:"60%"}}
         margin={"auto"}
         // height={600}
-        mt={20}
+        mt={{base:4, sm:8, md:8, lg:20}}
         padding={4}
       >
         {/* ******************************************************  ********************************************************** */}
@@ -214,6 +214,18 @@ const Payment = () => {
                 Book Your Seat Now
               </Button>
             </Box>
+
+            <SimpleGrid display={{base:'block', sm:'block', md:'block', lg:'none'}} gap={2}>
+            <Text fontSize={{base:16, sm:16, md:18, lg:18}}>
+            Gain a thorough understanding of the principles driving personal finance to effortlessly reach your financial aspirations.
+          </Text>
+          <Box fontSize={{base:16, sm:16, md:22, lg:22}} fontWeight={600}>
+            <Text >
+              Date of Masterclass: 2nd June, 2024
+            </Text>
+            <Text>Time of Masterclass: 4:00 PM - 7:00 PM</Text>
+          </Box>
+          </SimpleGrid>
           </Stack>
         </Stack>
 

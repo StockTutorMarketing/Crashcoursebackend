@@ -31,8 +31,8 @@ const userSchema = mongoose.Schema({
   failurereason: {
     type: String
   },
-  created_at: { type: Date, default: Date.now }
-
+  created_at: { type: Date, default: Date.now },
+  price: Number
 });
 
 

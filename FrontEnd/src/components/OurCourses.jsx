@@ -56,13 +56,13 @@ const OurCourses = () => {
 
             <Stack 
             style={contentStyle}
-            gap={4} 
+            gap={{base:2, sm:4, md:4, lg:4}}
             width={'90%'} 
             margin={'auto'} 
             textAlign={'center'}
             >
-              <Heading fontFamily={'roboto'} fontWeight={500} fontSize={24}>Basics Of Stock Market</Heading>
-              <Text justifyContent={'center'}>
+              <Heading fontFamily={'roboto'} fontWeight={500} fontSize={{base:18, sm:24, md:24, lg:24}}>Basics Of Stock Market</Heading>
+              <Text textAlign={{base:'center', sm:'center', md:'center', lg:'center'}}>
                 Grasp the fundamentals, from understanding stocks and stock
                 exchanges to decoding market terminology and setting clear
                 investment goals
@@ -96,9 +96,9 @@ const OurCourses = () => {
               <Lottie animationData={ManMoving}/>
             </Box>
 
-            <Stack style={contentStyle} gap={4} width={'90%'} margin={'auto'} textAlign={'center'}>
+            <Stack style={contentStyle} gap={{base:2, sm:4, md:4, lg:4}} width={'90%'} margin={'auto'} textAlign={'center'}>
               <Heading fontFamily={'roboto'} fontWeight={500} fontSize={24}>Fundamental Analysis</Heading>
-              <Text justifyContent={'center'}>
+              <Text textAlign={{base:'center', sm:'center', md:'center', lg:'center'}}>
               Discover the essentials of Fundamental Analysis in stock exchange training – demystifying stock market insights. Gain the skills to evaluate companies and make savvy investment choices with confidence.
               </Text>
               <SimpleGrid margin={'auto'} justifyContent={'center'} columns={{base:1, sm:1, md:1, lg:2}} gap={1} >
@@ -130,9 +130,9 @@ const OurCourses = () => {
               <Lottie animationData={Girl}/>
             </Box>
 
-            <Stack style={contentStyle} gap={4} width={'90%'} margin={'auto'} textAlign={'center'}>
+            <Stack style={contentStyle} gap={{base:2, sm:4, md:4, lg:4}} width={'90%'} margin={'auto'} textAlign={'center'}>
               <Heading fontFamily={'roboto'} fontWeight={500} fontSize={24}>Technical Analysis</Heading>
-              <Text justifyContent={'center'}>
+              <Text textAlign={{base:'center', sm:'center', md:'center', lg:'center'}}>
               Explore the world of Technical Analysis through our courses regarding stock market, where we break down complex market trends and charts into simple, actionable insights. Acquire the skills to make informed trading decisions confidently.
               </Text>
               <SimpleGrid margin={'auto'} justifyContent={'center'} columns={{base:1, sm:1, md:1, lg:2}} gap={1} >
@@ -164,9 +164,9 @@ const OurCourses = () => {
               <Lottie animationData={Derivative}/>
             </Box>
 
-            <Stack style={contentStyle} gap={4} width={'90%'} margin={'auto'} textAlign={'center'}>
+            <Stack style={contentStyle} gap={{base:2, sm:4, md:4, lg:4}} width={'90%'} margin={'auto'} textAlign={'center'}>
               <Heading fontFamily={'roboto'} fontWeight={500} fontSize={24}>Derivatives</Heading>
-              <Text justifyContent={'center'}>
+              <Text textAlign={{base:'center', sm:'center', md:'center', lg:'center'}}>
               Begin your exploration of Derivatives with our online trading courses, where we simplify complex financial instruments. Develop expertise in risk management and trading strategies to gain a thorough grasp of the market.
               </Text>
               <SimpleGrid margin={'auto'} justifyContent={'center'} columns={{base:1, sm:1, md:1, lg:2}} gap={1} >
