@@ -8,8 +8,6 @@ import Certificate from '../components/Certificate';
 import Testimonials from '../components/Testimonials';
 import OurCourses from '../components/OurCourses';
 import WhatOffer from '../components/WhatOffer';
-// import Promo from "../components/Promo";
-// import promo from "../Data/promo.mp4";
 import Combinebottom from "../components/Combinebottom";
 
 const Home = () => {
@@ -37,7 +35,6 @@ const Home = () => {
     return (
         <>
             <Combine />
-            {/* <Promo src={promo} /> */}
             <Combinebottom/>
             <OurCourses />
             <WhatOffer />

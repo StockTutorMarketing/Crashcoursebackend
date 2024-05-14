@@ -3,7 +3,6 @@ import {
   Button,
   Flex,
   Grid,
-  HStack,
   Heading,
   Image,
   SimpleGrid,
@@ -20,6 +19,7 @@ import promo from "../Data/promo.mp4";
 import { useState } from "react";
 import crashtext from "../Data/animatedtext.gif";
 import { motion } from "framer-motion";
+import logo from "../Data/logo.png"
 
 const Combine = () => {
   const text = "Take Charge of Your Future with StockTutor's 3 Hours Crash Course".split(" ");
@@ -37,12 +37,12 @@ const Combine = () => {
 
   return (
     <>
-      <Box bgGradient="linear(to-r, #131543, #525368, #131543)" pb={16}>
+      <Box bgGradient="linear(to-r, #131543, #525368, #131543)" pb={{base:2, sm:4, md:16, lg:16}}>
         <Stack p={12} gap={{ base: 4, sm: 8, md: 8, lg: 12 }}>
           <SimpleGrid
             columns={{ base: 1, sm: 1, md: 1, lg: 2 }}
             justifyContent={"space-around"}
-            gap={{ base: 5, sm: 5, md: 0, lg: 0 }}
+            gap={{ base: 5, sm: 5, md: 10, lg: 0 }}
           >
             {/* *************************************Left Portion************************************************* */}
             {/* ************************************************************************************************** */}
@@ -50,10 +50,13 @@ const Combine = () => {
             <Stack
             // border={'2px solid red'}
               width={{ base: "100%", sm: "100%", md: "80%", lg: "70%" }}
-              gap={{ base: 4, sm: 8, md: 8, lg: 10 }}
+              gap={{ base: 4, sm: 8, md: 8, lg: 12 }}
               margin={"auto"}
             >
-              <Box display={{base:'block', sm:'block', md:'none', lg:'none'}} className="topText" width={{ base: "100%", sm: "100%", md: "100%", lg: "160%" }}>
+            <Box justifyContent={'center'} display={{base:'block', sm:'block', md:'none', lg:'none'}}>
+            <Flex gap={{base:2, sm:2, md:0, lg:0}} justifyContent={'center'} alignItems={'center'}>
+              <Image width={'22%'} height={'100%'} src={logo} alt="logo"/>
+              <Box className="topText" width={{ base: "100%", sm: "100%", md: "100%", lg: "160%" }}>
                 {/* <Image src={crashtext} alt="crashcoursetext"/> */}
                 {text.map((el, i) => (
                   <motion.span
@@ -69,8 +72,15 @@ const Combine = () => {
                   </motion.span>
                 ))}
               </Box>
-              <Box display={{base:'none', sm:'none', md:'block', lg:'block'}} width={{ base: "100%", sm: "100%", md: "100%", lg: "160%" }}>
+            </Flex> 
+            </Box>
+
+              <Box display={{base:'none', sm:'none', md:'block', lg:'block'}}>
+
+              <Box alignItems={'center'} gap={5} display={{base:'none', sm:'none', md:'flex', lg:'flex'}} width={{ base: "100%", sm: "100%", md: "100%", lg: "110%" }}>
+              <Image width={'20%'} height={'100%'} src={logo} alt="logo"/>
                 <Image src={crashtext} alt="crashcoursetext"/>
+              </Box>
               </Box>
 
               <Box>
