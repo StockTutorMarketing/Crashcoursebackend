@@ -48,7 +48,6 @@ const Combine = () => {
             {/* ************************************************************************************************** */}
 
             <Stack
-            // border={'2px solid red'}
               width={{ base: "100%", sm: "100%", md: "80%", lg: "70%" }}
               gap={{ base: 4, sm: 8, md: 8, lg: 12 }}
               margin={"auto"}
@@ -106,12 +105,9 @@ const Combine = () => {
                 gap={{ base: 4, sm: 8, md: 8, lg: 12 }}
                 margin={"auto"}
                 justifyContent={"space-between"}
-                // border={'2px solid red'}
                 width="100%"
               >
                 <Flex
-                  // border={"2px solid red"}
-                  // textAlign={'center'}
                   className="gradient_anim_btn_combine"
                   borderRadius={10}
                   padding={{
@@ -124,7 +120,6 @@ const Combine = () => {
                   gap={2}
                   justifyItems={"center"}
                   alignItems={"center"}
-                  // width={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
                 >
                   <FaCalendar />
                   <Box>2nd June, 2024</Box>
@@ -153,7 +148,6 @@ const Combine = () => {
                 bg={"#F5C114"}
                 fontWeight={800}
                 fontSize={{ base: 12, sm: 12, md: 16, lg: 20 }}
-                // rightIcon={<Lottie style={{fontsize:'4px'}} animationData={alert}/>}
               >
                 Book your seat now at ₹399 only
               </Button>
@@ -172,8 +166,6 @@ const Combine = () => {
                   muted={muted}
                   onClick={toggleMute}
                   style={{
-                    // width: "100%",
-                    // height: "100%",
                     objectFit: "cover",
                     borderRadius: "20px 20px 0px 0px",
                   }}
@@ -183,10 +175,7 @@ const Combine = () => {
               </Box>
               <Box
                 borderRadius={"0px 0px 20px 20px"}
-                // bg={"#f5c114"}
-                // height={"100%"}
                 bgImage={textbg}
-                // bgBlendMode={20}
               >
                 <Grid
                   padding={{ base: 4, sm: 4, md: 8, lg: 12 }}
