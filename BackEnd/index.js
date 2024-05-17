@@ -54,12 +54,12 @@ app.use("/api/v1", require("./Routes/routes"))
 
 
 //  Server Running 
-app.listen(process.env.port, async () => {
+app.listen(process.env.port || 5000, async () => {
   try {
     await connection;
     // task.start()
     console.log("Connected To Database");
-    console.log(`Server is UP & Running on ${process.env.port}`);
+    console.log(`Server is UP & Running on ${process.env.port || 4500}`);
   } catch (error) {
     console.log("Error", error.message);
   }
